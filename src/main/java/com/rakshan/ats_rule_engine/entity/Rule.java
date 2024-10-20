@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 @Table(name = "rules")
 public class Rule {
 
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

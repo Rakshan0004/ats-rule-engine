@@ -33,6 +33,7 @@ public class RuleController {
     @PostMapping("/evaluate")
     public boolean evaluateRule(@RequestBody Map<String, Object> request) throws Exception {
         Long ruleId = Long.parseLong(request.get("ruleId").toString());
+        @SuppressWarnings("unchecked")
         Map<String, Object> userData = (Map<String, Object>) request.get("userData");
         return ruleService.evaluateRule(ruleId, userData);
     }
